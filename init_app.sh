@@ -1,5 +1,5 @@
 # para a execucao do processo no servidor
-PROCESS_ID=0
+PROCESS_ID=1
 PROCESS_NAME="guia-tera"
 
 export PORT=3000

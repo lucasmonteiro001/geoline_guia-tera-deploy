@@ -97,163 +97,133 @@ MdlMeusProjetos.applyPublications();                                            
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                                                                                        //
 module.export({schemaMeusProjetos:function(){return schemaMeusProjetos}});var schemaMeusProjetos = {                   // 1
-    title: {                                                                                                           // 2
-        type: String,                                                                                                  // 3
-        defaultValue: '',                                                                                              // 4
-        label: 'Titulo',                                                                                               // 5
+    name: {                                                                                                            // 2
+        type: "String",                                                                                                // 3
+        defaultValue: "",                                                                                              // 4
+        label: 'Nome',                                                                                                 // 5
         formOptions: {                                                                                                 // 6
             VISIBLE: true,                                                                                             // 7
             FIELD_COMPONENT: 'TextField'                                                                               // 8
         },                                                                                                             // 6
         formValidation: {                                                                                              // 10
-            required: { value: true, message: 'O título do meuprojeto é obrigatório' }                                 // 11
-        },                                                                                                             // 10
-        dataTableConfig: {                                                                                             // 13
-            link: {                                                                                                    // 14
-                router: 'MeusProjetosView',                                                                            // 15
-                field: '_id'                                                                                           // 16
-            }                                                                                                          // 14
-        }                                                                                                              // 13
+            required: { value: true, message: 'O nome é obrigatório!' }                                                // 11
+        }                                                                                                              // 10
     },                                                                                                                 // 2
-    text: {                                                                                                            // 20
-        type: String,                                                                                                  // 21
-        defaultValue: '',                                                                                              // 22
-        label: 'Texto',                                                                                                // 23
-        formOptions: {                                                                                                 // 24
-            VISIBLE: true,                                                                                             // 25
-            FIELD_COMPONENT: 'TextField'                                                                               // 26
-        },                                                                                                             // 24
-        formValidation: {                                                                                              // 28
-            required: { value: true, message: 'O texto do meuprojeto é obrigatório' }                                  // 29
-        }                                                                                                              // 28
-    },                                                                                                                 // 20
-    name: {                                                                                                            // 32
-        type: "String",                                                                                                // 33
-        defaultValue: "",                                                                                              // 34
-        label: 'Nome',                                                                                                 // 35
-        formOptions: {                                                                                                 // 36
-            VISIBLE: true,                                                                                             // 37
-            FIELD_COMPONENT: 'TextField'                                                                               // 38
-        },                                                                                                             // 36
-        formValidation: {                                                                                              // 40
-            required: { value: true, message: 'O nome é obrigatório!' }                                                // 41
-        }                                                                                                              // 40
-    },                                                                                                                 // 32
-    cpf: {                                                                                                             // 44
-        type: String,                                                                                                  // 45
-        defaultValue: '',                                                                                              // 46
-        label: 'CPF',                                                                                                  // 47
-        formOptions: {                                                                                                 // 48
-            VISIBLE: true,                                                                                             // 49
-            FIELD_COMPONENT: 'TextField'                                                                               // 50
-        },                                                                                                             // 48
-        formValidation: {                                                                                              // 52
-            required: { value: true, message: 'O CPF é obrigatório' }                                                  // 53
-        }                                                                                                              // 52
-    },                                                                                                                 // 44
-    cep: {                                                                                                             // 56
-        type: String,                                                                                                  // 57
-        defaultValue: '',                                                                                              // 58
-        label: 'CEP',                                                                                                  // 59
-        formOptions: {                                                                                                 // 60
-            VISIBLE: true,                                                                                             // 61
-            FIELD_COMPONENT: 'TextField'                                                                               // 62
-        },                                                                                                             // 60
-        formValidation: {                                                                                              // 64
-            required: { value: true, message: 'O CEP é obrigatório' }                                                  // 65
-        }                                                                                                              // 64
-    },                                                                                                                 // 56
-    rua: {                                                                                                             // 68
-        type: String,                                                                                                  // 69
-        defaultValue: '',                                                                                              // 70
-        label: 'Rua',                                                                                                  // 71
-        formOptions: {                                                                                                 // 72
-            VISIBLE: true,                                                                                             // 73
-            FIELD_COMPONENT: 'TextField'                                                                               // 74
-        },                                                                                                             // 72
-        formValidation: {                                                                                              // 76
-            required: { value: true, message: "A rua é obrigatória" }                                                  // 77
-        }                                                                                                              // 76
-    },                                                                                                                 // 68
-    bairro: {                                                                                                          // 80
-        type: String,                                                                                                  // 81
-        defaultValue: '',                                                                                              // 82
-        label: 'bairro',                                                                                               // 83
-        formOptions: {                                                                                                 // 84
-            VISIBLE: true,                                                                                             // 85
-            FIELD_COMPONENT: 'TextField'                                                                               // 86
-        },                                                                                                             // 84
-        formValidation: {                                                                                              // 88
-            required: { value: true, message: "O bairro é obrigatório" }                                               // 89
-        }                                                                                                              // 88
-    },                                                                                                                 // 80
-    localidade: {                                                                                                      // 92
-        type: String,                                                                                                  // 93
-        defaultValue: '',                                                                                              // 94
-        label: 'Localidade',                                                                                           // 95
-        formOptions: {                                                                                                 // 96
-            VISIBLE: true,                                                                                             // 97
-            FIELD_COMPONENT: 'TextField'                                                                               // 98
-        },                                                                                                             // 96
+    cpf: {                                                                                                             // 14
+        type: String,                                                                                                  // 15
+        defaultValue: '',                                                                                              // 16
+        label: 'CPF',                                                                                                  // 17
+        formOptions: {                                                                                                 // 18
+            VISIBLE: true,                                                                                             // 19
+            FIELD_COMPONENT: 'TextField'                                                                               // 20
+        },                                                                                                             // 18
+        formValidation: {                                                                                              // 22
+            required: { value: true, message: 'O CPF é obrigatório' }                                                  // 23
+        }                                                                                                              // 22
+    },                                                                                                                 // 14
+    cep: {                                                                                                             // 26
+        type: String,                                                                                                  // 27
+        defaultValue: '',                                                                                              // 28
+        label: 'CEP',                                                                                                  // 29
+        formOptions: {                                                                                                 // 30
+            VISIBLE: true,                                                                                             // 31
+            FIELD_COMPONENT: 'TextField'                                                                               // 32
+        },                                                                                                             // 30
+        formValidation: {                                                                                              // 34
+            required: { value: true, message: 'O CEP é obrigatório' }                                                  // 35
+        }                                                                                                              // 34
+    },                                                                                                                 // 26
+    rua: {                                                                                                             // 38
+        type: String,                                                                                                  // 39
+        defaultValue: '',                                                                                              // 40
+        label: 'Rua',                                                                                                  // 41
+        formOptions: {                                                                                                 // 42
+            VISIBLE: true,                                                                                             // 43
+            FIELD_COMPONENT: 'TextField'                                                                               // 44
+        },                                                                                                             // 42
+        formValidation: {                                                                                              // 46
+            required: { value: true, message: "A rua é obrigatória" }                                                  // 47
+        }                                                                                                              // 46
+    },                                                                                                                 // 38
+    bairro: {                                                                                                          // 50
+        type: String,                                                                                                  // 51
+        defaultValue: '',                                                                                              // 52
+        label: 'bairro',                                                                                               // 53
+        formOptions: {                                                                                                 // 54
+            VISIBLE: true,                                                                                             // 55
+            FIELD_COMPONENT: 'TextField'                                                                               // 56
+        },                                                                                                             // 54
+        formValidation: {                                                                                              // 58
+            required: { value: true, message: "O bairro é obrigatório" }                                               // 59
+        }                                                                                                              // 58
+    },                                                                                                                 // 50
+    localidade: {                                                                                                      // 62
+        type: String,                                                                                                  // 63
+        defaultValue: '',                                                                                              // 64
+        label: 'Localidade',                                                                                           // 65
+        formOptions: {                                                                                                 // 66
+            VISIBLE: true,                                                                                             // 67
+            FIELD_COMPONENT: 'TextField'                                                                               // 68
+        },                                                                                                             // 66
+        formValidation: {                                                                                              // 70
+            required: { value: true, message: "A localidade é obrigatória" }                                           // 71
+        }                                                                                                              // 70
+    },                                                                                                                 // 62
+    uf: {                                                                                                              // 74
+        type: String,                                                                                                  // 75
+        defaultValue: '',                                                                                              // 76
+        label: 'UF',                                                                                                   // 77
+        formOptions: {                                                                                                 // 78
+            VISIBLE: true,                                                                                             // 79
+            FIELD_COMPONENT: 'TextField'                                                                               // 80
+        },                                                                                                             // 78
+        formValidation: {                                                                                              // 82
+            required: { value: true, message: "UF é obrigatório" }                                                     // 83
+        }                                                                                                              // 82
+    },                                                                                                                 // 74
+    process: {                                                                                                         // 86
+        type: Object,                                                                                                  // 87
+        blackbox: true,                                                                                                // 88
+        defaultValue: [],                                                                                              // 89
+        label: 'Tipo de Guia',                                                                                         // 90
+        formOptions: {                                                                                                 // 91
+            VISIBLE: true,                                                                                             // 92
+            FIELD_COMPONENT: 'CollectionSelectField',                                                                  // 93
+            OPTIONSCOLLECTION: {                                                                                       // 94
+                COLLECTIONBASE: 'CollectionProcessos',                                                                 // 95
+                COLLECTION_SCHEMA: 'tableview',                                                                        // 96
+                FIRST_FIELD: 'name'                                                                                    // 97
+            }                                                                                                          // 94
+        },                                                                                                             // 91
         formValidation: {                                                                                              // 100
-            required: { value: true, message: "A localidade é obrigatória" }                                           // 101
+            required: { value: true, message: 'O ID da Seção é obrigatório' }                                          // 101
         }                                                                                                              // 100
-    },                                                                                                                 // 92
-    uf: {                                                                                                              // 104
-        type: String,                                                                                                  // 105
-        defaultValue: '',                                                                                              // 106
-        label: 'UF',                                                                                                   // 107
-        formOptions: {                                                                                                 // 108
-            VISIBLE: true,                                                                                             // 109
-            FIELD_COMPONENT: 'TextField'                                                                               // 110
-        },                                                                                                             // 108
-        formValidation: {                                                                                              // 112
-            required: { value: true, message: "UF é obrigatório" }                                                     // 113
-        }                                                                                                              // 112
+    },                                                                                                                 // 86
+    tasks: {                                                                                                           // 104
+        type: [Object],                                                                                                // 105
+        blackbox: true,                                                                                                // 106
+        defaultValue: [],                                                                                              // 107
+        label: 'Subprocessos',                                                                                         // 108
+        optional: true                                                                                                 // 109
     },                                                                                                                 // 104
-    process: {                                                                                                         // 116
-        type: Object,                                                                                                  // 117
-        blackbox: true,                                                                                                // 118
-        defaultValue: [],                                                                                              // 119
-        label: 'Processo',                                                                                             // 120
-        formOptions: {                                                                                                 // 121
-            VISIBLE: true,                                                                                             // 122
-            FIELD_COMPONENT: 'CollectionSelectField',                                                                  // 123
-            OPTIONSCOLLECTION: {                                                                                       // 124
-                COLLECTIONBASE: 'CollectionProcessos',                                                                 // 125
-                COLLECTION_SCHEMA: 'tableview',                                                                        // 126
-                FIRST_FIELD: 'name'                                                                                    // 127
-            }                                                                                                          // 124
-        },                                                                                                             // 121
-        formValidation: {                                                                                              // 130
-            required: { value: true, message: 'O ID da Seção é obrigatório' }                                          // 131
-        }                                                                                                              // 130
-    },                                                                                                                 // 116
-    tasks: {                                                                                                           // 134
-        type: [Object],                                                                                                // 135
-        blackbox: true,                                                                                                // 136
-        defaultValue: [],                                                                                              // 137
-        label: 'Subprocessos',                                                                                         // 138
-        optional: true                                                                                                 // 139
-    },                                                                                                                 // 134
-    createdDate: {                                                                                                     // 141
-        type: Date,                                                                                                    // 142
-        label: "Data de Criação",                                                                                      // 143
-        autoValue: function () {                                                                                       // 144
-            function autoValue() {                                                                                     // 144
-                if (this.isInsert) return new Date();                                                                  // 145
-            }                                                                                                          // 147
+    createdDate: {                                                                                                     // 111
+        type: Date,                                                                                                    // 112
+        label: "Data de Criação",                                                                                      // 113
+        autoValue: function () {                                                                                       // 114
+            function autoValue() {                                                                                     // 114
+                if (this.isInsert) return new Date();                                                                  // 115
+            }                                                                                                          // 117
                                                                                                                        //
-            return autoValue;                                                                                          // 144
-        }(),                                                                                                           // 144
-        denyUpdate: true,                                                                                              // 148
-        optional: true,                                                                                                // 149
-        formOptions: {                                                                                                 // 150
-            VISIBLE: true,                                                                                             // 151
-            FIELD_COMPONENT: 'TextField',                                                                              // 152
-            FIELD_TYPE: 'date'                                                                                         // 153
-        }                                                                                                              // 150
-    }                                                                                                                  // 141
+            return autoValue;                                                                                          // 114
+        }(),                                                                                                           // 114
+        denyUpdate: true,                                                                                              // 118
+        optional: true,                                                                                                // 119
+        formOptions: {                                                                                                 // 120
+            VISIBLE: true,                                                                                             // 121
+            FIELD_COMPONENT: 'TextField',                                                                              // 122
+            FIELD_TYPE: 'date'                                                                                         // 123
+        }                                                                                                              // 120
+    }                                                                                                                  // 111
 };                                                                                                                     // 1
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -287,22 +257,22 @@ CollectionProcessos.addSubSchema('view', ['name', 'description', 'firstsubproces
                                                                                                                        //
 CollectionProcessos.addSubSchema('tableview', ['name', 'description', 'firstsubprocess']);                             // 26
                                                                                                                        //
-//################################################                                                                     // 29
-//############ RESTRIÇÃO DE ACESSO ###############                                                                     // 30
-//################################################                                                                     // 31
-var permissions = [                                                                                                    // 32
-    //     {                                                                                                           // 33
-    //     actions: ['insert', 'update', 'remove', 'read'],                                                            // 34
-    //     groups: ['administrador'], //Permissions by Functionality                                                   // 35
-    // },                                                                                                              // 36
-    //     {                                                                                                           // 37
-    //         actions: ['remove', 'read', 'update'],                                                                  // 38
-    //         groups: ['administrador'], //Permissions by Functionality                                               // 39
-    //         data: {userId: "{_UserID_}"}, //Filter/Permissions by Data                                              // 40
-    //     },                                                                                                          // 41
-];                                                                                                                     // 32
+//################################################                                                                     // 30
+//############ RESTRIÇÃO DE ACESSO ###############                                                                     // 31
+//################################################                                                                     // 32
+var permissions = [                                                                                                    // 33
+    //     {                                                                                                           // 34
+    //     actions: ['insert', 'update', 'remove', 'read'],                                                            // 35
+    //     groups: ['administrador'], //Permissions by Functionality                                                   // 36
+    // },                                                                                                              // 37
+    //     {                                                                                                           // 38
+    //         actions: ['remove', 'read', 'update'],                                                                  // 39
+    //         groups: ['administrador'], //Permissions by Functionality                                               // 40
+    //         data: {userId: "{_UserID_}"}, //Filter/Permissions by Data                                              // 41
+    //     },                                                                                                          // 42
+];                                                                                                                     // 33
                                                                                                                        //
-CollectionProcessos.setPermissions(permissions);                                                                       // 44
+CollectionProcessos.setPermissions(permissions);                                                                       // 45
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }],"model.js":["babel-runtime/helpers/classCallCheck","babel-runtime/helpers/possibleConstructorReturn","babel-runtime/helpers/inherits","./collection.js","../reuse/modelBase",function(require,exports,module){

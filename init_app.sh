@@ -4,7 +4,7 @@ PROCESS_NAME="guia-tera"
 
 export PORT=3000
 export MONGO_URL="mongodb://localhost:27017/meteor"
-export ROOT_URL="http://104.236.79.249"
+export ROOT_URL="http://45.55.184.104"
 
 pm2 stop $PROCESS_ID
 

@@ -1922,7 +1922,7 @@ Meteor.startup(function () {                                                    
     console.log("Fim do processo de linkagem");                                                                        // 184
                                                                                                                        //
     console.log("Inserindo o firstsubprocess no processo");                                                            // 186
-    processo.firstsubprocess = SubProcessos.findOne();                                                                 // 187
+    processo.firstsubprocess = SubProcessos.find({ secao: '4' }).fetch()[0];                                           // 187
     Processos.update({ _id: processo._id }, { $set: processo }, { bypassCollection2: true });                          // 188
     console.log("Fim da inserção do firstsubprocess no processo");                                                     // 189
                                                                                                                        //

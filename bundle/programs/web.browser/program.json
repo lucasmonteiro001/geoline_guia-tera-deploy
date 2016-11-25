@@ -2,13 +2,13 @@
   "format": "web-program-pre1",
   "manifest": [
     {
-      "path": "7c43ea55e69414f79818bbb691a72840e104d56c.js",
+      "path": "32a9542ad1cb173488a7ac8357b918ace3118964.js",
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/7c43ea55e69414f79818bbb691a72840e104d56c.js?meteor_js_resource=true",
-      "size": 3057661,
-      "hash": "7c43ea55e69414f79818bbb691a72840e104d56c"
+      "url": "/32a9542ad1cb173488a7ac8357b918ace3118964.js?meteor_js_resource=true",
+      "size": 4026303,
+      "hash": "32a9542ad1cb173488a7ac8357b918ace3118964"
     },
     {
       "path": "091c67cb01eb50666efbfa24aa1045f6956ee602.css",
@@ -171,6 +171,51 @@
       "url": "/images/padronagem2.png",
       "size": 9497,
       "hash": "a867c8eee8b94bcc19f1834dbb8d2b8f072b3246"
+    },
+    {
+      "path": "app/pdf/ConformacaoObjetiva.pdf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/pdf/ConformacaoObjetiva.pdf",
+      "size": 82069,
+      "hash": "c4b40e0742c3d7a0ee90d478423a550aeca55e9e"
+    },
+    {
+      "path": "app/pdf/EnquadramentoSocial.pdf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/pdf/EnquadramentoSocial.pdf",
+      "size": 53314,
+      "hash": "6fb0befd4a5e4e8a6aed0d5f09bf546357e345b7"
+    },
+    {
+      "path": "app/pdf/LocalizacaoUrbana.pdf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/pdf/LocalizacaoUrbana.pdf",
+      "size": 76050,
+      "hash": "3ecb2e22e8724236ddf3a314b2f65060f96c42b3"
+    },
+    {
+      "path": "app/pdf/Temporalidade.pdf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/pdf/Temporalidade.pdf",
+      "size": 74140,
+      "hash": "0b193e6bcfd6eba1d7759956d127174335d12594"
+    },
+    {
+      "path": "app/pdf/Titulacao.pdf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/pdf/Titulacao.pdf",
+      "size": 173975,
+      "hash": "55a2ddeec8783efcd50eca7bbe24a97e540bf82c"
     },
     {
       "path": "app/images/logos-registros/cori.png",

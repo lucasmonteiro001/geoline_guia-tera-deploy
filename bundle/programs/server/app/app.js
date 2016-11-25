@@ -1534,13 +1534,13 @@ CollectionSubProcessos.setSchema(schemaSubProcessos);                           
 //################ SUB-SCHEMAS ###################                                                                     // 11
 //################################################                                                                     // 12
                                                                                                                        //
-CollectionSubProcessos.addSubSchema('default', ['title', 'text', 'pergunta', 'options', 'process', 'phase']);          // 14
+CollectionSubProcessos.addSubSchema('default', ['title', 'text', 'pergunta', 'options', 'process', 'tasks', 'phase']);
                                                                                                                        //
-CollectionSubProcessos.addSubSchema('insert', ['title', 'text', 'pergunta', 'options', 'process', 'phase']);           // 17
+CollectionSubProcessos.addSubSchema('insert', ['title', 'text', 'pergunta', 'options', 'process', 'tasks', 'phase']);  // 17
                                                                                                                        //
-CollectionSubProcessos.addSubSchema('update', ['title', 'text', 'pergunta', 'options', 'process', 'phase']);           // 20
+CollectionSubProcessos.addSubSchema('update', ['title', 'text', 'pergunta', 'options', 'process', 'tasks', 'phase']);  // 20
                                                                                                                        //
-CollectionSubProcessos.addSubSchema('view', ['title', 'text', 'pergunta', 'options', 'process', 'phase']);             // 23
+CollectionSubProcessos.addSubSchema('view', ['title', 'text', 'pergunta', 'options', 'process', 'tasks', 'phase']);    // 23
                                                                                                                        //
 CollectionSubProcessos.addSubSchema('tableview', ['title', 'text', 'pergunta']);                                       // 26
                                                                                                                        //

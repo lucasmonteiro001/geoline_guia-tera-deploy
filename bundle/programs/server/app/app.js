@@ -1534,15 +1534,15 @@ CollectionSubProcessos.setSchema(schemaSubProcessos);                           
 //################ SUB-SCHEMAS ###################                                                                     // 11
 //################################################                                                                     // 12
                                                                                                                        //
-CollectionSubProcessos.addSubSchema('default', ['title', 'text', 'options', 'process', 'tasks', 'phase']);             // 14
+CollectionSubProcessos.addSubSchema('default', ['title', 'text', 'pergunta', 'options', 'process', 'tasks', 'phase']);
                                                                                                                        //
-CollectionSubProcessos.addSubSchema('insert', ['title', 'text', 'options', 'process', 'tasks', 'phase']);              // 17
+CollectionSubProcessos.addSubSchema('insert', ['title', 'text', 'pergunta', 'options', 'process', 'tasks', 'phase']);  // 17
                                                                                                                        //
-CollectionSubProcessos.addSubSchema('update', ['title', 'text', 'options', 'process', 'tasks', 'phase']);              // 20
+CollectionSubProcessos.addSubSchema('update', ['title', 'text', 'pergunta', 'options', 'process', 'tasks', 'phase']);  // 20
                                                                                                                        //
-CollectionSubProcessos.addSubSchema('view', ['title', 'text', 'options', 'process', 'tasks', 'phase']);                // 23
+CollectionSubProcessos.addSubSchema('view', ['title', 'text', 'pergunta', 'options', 'process', 'tasks', 'phase']);    // 23
                                                                                                                        //
-CollectionSubProcessos.addSubSchema('tableview', ['title', 'text']);                                                   // 26
+CollectionSubProcessos.addSubSchema('tableview', ['title', 'text', 'pergunta']);                                       // 26
                                                                                                                        //
 //################################################                                                                     // 29
 //############ RESTRIÇÃO DE ACESSO ###############                                                                     // 30
@@ -1637,157 +1637,172 @@ module.export({schemaSubProcessos:function(){return schemaSubProcessos}});var sc
         },                                                                                                             // 24
         formValidation: {                                                                                              // 28
             required: { value: true, message: 'O texto do subprocesso é obrigatório' }                                 // 29
-        }                                                                                                              // 28
+        },                                                                                                             // 28
+        optional: true                                                                                                 // 31
     },                                                                                                                 // 20
-    phase: {                                                                                                           // 32
-        type: String,                                                                                                  // 33
-        defaultValue: '',                                                                                              // 34
-        label: 'Fase',                                                                                                 // 35
-        formOptions: {                                                                                                 // 36
-            VISIBLE: true,                                                                                             // 37
-            FIELD_COMPONENT: 'TextField'                                                                               // 38
-        },                                                                                                             // 36
-        formValidation: {                                                                                              // 40
-            required: { value: true, message: 'A fase a qual o subprocesso pertence é obrigatória' }                   // 41
-        }                                                                                                              // 40
-    },                                                                                                                 // 32
-    process: {                                                                                                         // 44
-        type: Object,                                                                                                  // 45
-        blackbox: true,                                                                                                // 46
-        defaultValue: [],                                                                                              // 47
-        label: 'Processo',                                                                                             // 48
-        formOptions: {                                                                                                 // 49
-            VISIBLE: true,                                                                                             // 50
-            FIELD_COMPONENT: 'CollectionSelectField',                                                                  // 51
-            OPTIONSCOLLECTION: {                                                                                       // 52
-                COLLECTIONBASE: 'CollectionProcessos',                                                                 // 53
-                COLLECTION_SCHEMA: 'tableview',                                                                        // 54
-                FIRST_FIELD: 'name'                                                                                    // 55
-            }                                                                                                          // 52
-        },                                                                                                             // 49
-        formValidation: {                                                                                              // 58
-            required: { value: true, message: 'O ID da Seção é obrigatório' }                                          // 59
-        }                                                                                                              // 58
-    },                                                                                                                 // 44
-    options: {                                                                                                         // 62
-        type: [Object],                                                                                                // 63
-        blackbox: true,                                                                                                // 64
-        defaultValue: [],                                                                                              // 65
-        label: 'Opções',                                                                                               // 66
-        optional: true,                                                                                                // 67
-        formOptions: {                                                                                                 // 68
-            VISIBLE: true,                                                                                             // 69
-            FIELD_COMPONENT: 'MaterialUITableEdit',                                                                    // 70
-            FIELD_SCHEMA: {                                                                                            // 71
-                option: {                                                                                              // 72
-                    type: String,                                                                                      // 73
-                    defaultValue: '',                                                                                  // 74
-                    label: 'Opção',                                                                                    // 75
-                    formOptions: {                                                                                     // 76
-                        VISIBLE: true,                                                                                 // 77
-                        FIELD_COMPONENT: 'TextField'                                                                   // 78
-                    }                                                                                                  // 76
-                },                                                                                                     // 72
-                subprocess: {                                                                                          // 81
-                    type: Object,                                                                                      // 82
-                    blackbox: true,                                                                                    // 83
-                    defaultValue: [],                                                                                  // 84
-                    label: 'SubProcesso',                                                                              // 85
-                    formOptions: {                                                                                     // 86
-                        VISIBLE: true,                                                                                 // 87
-                        FIELD_COMPONENT: 'CollectionSelectField',                                                      // 88
-                        OPTIONSCOLLECTION: {                                                                           // 89
-                            COLLECTIONBASE: 'CollectionSubProcessos',                                                  // 90
-                            COLLECTION_SCHEMA: 'tableview',                                                            // 91
-                            FIRST_FIELD: 'title'                                                                       // 92
-                        }                                                                                              // 89
-                    }                                                                                                  // 86
-                }                                                                                                      // 81
-            }                                                                                                          // 71
-        },                                                                                                             // 68
-        formValidation: {                                                                                              // 98
-            required: { value: true, message: 'O preenchimento da seções é obrigatório' }                              // 99
-        }                                                                                                              // 98
-    },                                                                                                                 // 62
-    tasks: {                                                                                                           // 102
-        type: [Object],                                                                                                // 103
-        blackbox: true,                                                                                                // 104
-        defaultValue: [],                                                                                              // 105
-        label: 'Tarefas',                                                                                              // 106
-        optional: true,                                                                                                // 107
-        formOptions: {                                                                                                 // 108
-            VISIBLE: true,                                                                                             // 109
-            FIELD_COMPONENT: 'MaterialUITableEdit',                                                                    // 110
-            FIELD_SCHEMA: {                                                                                            // 111
-                task: {                                                                                                // 112
-                    type: String,                                                                                      // 113
-                    defaultValue: '',                                                                                  // 114
-                    label: 'Tarefa',                                                                                   // 115
-                    formOptions: {                                                                                     // 116
-                        VISIBLE: true,                                                                                 // 117
-                        FIELD_COMPONENT: 'TextField'                                                                   // 118
-                    }                                                                                                  // 116
-                },                                                                                                     // 112
-                description: {                                                                                         // 121
-                    type: Object,                                                                                      // 122
-                    blackbox: true,                                                                                    // 123
-                    defaultValue: [],                                                                                  // 124
-                    label: 'Descrição',                                                                                // 125
-                    formOptions: {                                                                                     // 126
-                        VISIBLE: true,                                                                                 // 127
-                        FIELD_COMPONENT: 'TextField'                                                                   // 128
-                    }                                                                                                  // 126
-                },                                                                                                     // 121
-                completed: {                                                                                           // 131
-                    type: Boolean,                                                                                     // 132
-                    defaultValue: false,                                                                               // 133
-                    label: 'Completa?',                                                                                // 134
-                    formOptions: {                                                                                     // 135
-                        VISIBLE: false,                                                                                // 136
-                        FIELD_COMPONENT: 'TextField'                                                                   // 137
-                    }                                                                                                  // 135
-                }                                                                                                      // 131
-            }                                                                                                          // 111
-        },                                                                                                             // 108
-        formValidation: {                                                                                              // 142
-            required: { value: true, message: 'O preenchimento da seções é obrigatório' }                              // 143
-        }                                                                                                              // 142
-    },                                                                                                                 // 102
-    createdDate: {                                                                                                     // 146
-        type: Date,                                                                                                    // 147
-        label: "Data de Criação",                                                                                      // 148
-        autoValue: function () {                                                                                       // 149
-            function autoValue() {                                                                                     // 149
-                if (this.isInsert) return new Date();                                                                  // 150
-            }                                                                                                          // 152
-                                                                                                                       //
-            return autoValue;                                                                                          // 149
-        }(),                                                                                                           // 149
-        denyUpdate: true,                                                                                              // 153
-        optional: true,                                                                                                // 154
-        formOptions: {                                                                                                 // 155
-            VISIBLE: true,                                                                                             // 156
-            FIELD_COMPONENT: 'TextField',                                                                              // 157
-            FIELD_TYPE: 'date'                                                                                         // 158
-        }                                                                                                              // 155
-    },                                                                                                                 // 146
-    updatedDate: {                                                                                                     // 161
+    pergunta: {                                                                                                        // 33
+        type: String,                                                                                                  // 34
+        defaultValue: '',                                                                                              // 35
+        label: 'Pergunta',                                                                                             // 36
+        formOptions: {                                                                                                 // 37
+            VISIBLE: true,                                                                                             // 38
+            FIELD_COMPONENT: 'TextField'                                                                               // 39
+        },                                                                                                             // 37
+        formValidation: {                                                                                              // 41
+            required: { value: true, message: 'O texto do subprocesso é obrigatório' }                                 // 42
+        },                                                                                                             // 41
+        optional: true                                                                                                 // 44
+    },                                                                                                                 // 33
+    phase: {                                                                                                           // 46
+        type: String,                                                                                                  // 47
+        defaultValue: '',                                                                                              // 48
+        label: 'Fase',                                                                                                 // 49
+        formOptions: {                                                                                                 // 50
+            VISIBLE: true,                                                                                             // 51
+            FIELD_COMPONENT: 'TextField'                                                                               // 52
+        },                                                                                                             // 50
+        formValidation: {                                                                                              // 54
+            required: { value: true, message: 'A fase a qual o subprocesso pertence é obrigatória' }                   // 55
+        },                                                                                                             // 54
+        optional: true                                                                                                 // 57
+    },                                                                                                                 // 46
+    process: {                                                                                                         // 59
+        type: Object,                                                                                                  // 60
+        blackbox: true,                                                                                                // 61
+        defaultValue: [],                                                                                              // 62
+        label: 'Processo',                                                                                             // 63
+        formOptions: {                                                                                                 // 64
+            VISIBLE: true,                                                                                             // 65
+            FIELD_COMPONENT: 'CollectionSelectField',                                                                  // 66
+            OPTIONSCOLLECTION: {                                                                                       // 67
+                COLLECTIONBASE: 'CollectionProcessos',                                                                 // 68
+                COLLECTION_SCHEMA: 'tableview',                                                                        // 69
+                FIRST_FIELD: 'name'                                                                                    // 70
+            }                                                                                                          // 67
+        },                                                                                                             // 64
+        formValidation: {                                                                                              // 73
+            required: { value: true, message: 'O ID da Seção é obrigatório' }                                          // 74
+        }                                                                                                              // 73
+    },                                                                                                                 // 59
+    options: {                                                                                                         // 77
+        type: [Object],                                                                                                // 78
+        blackbox: true,                                                                                                // 79
+        defaultValue: [],                                                                                              // 80
+        label: 'Opções',                                                                                               // 81
+        optional: true,                                                                                                // 82
+        formOptions: {                                                                                                 // 83
+            VISIBLE: true,                                                                                             // 84
+            FIELD_COMPONENT: 'MaterialUITableEdit',                                                                    // 85
+            FIELD_SCHEMA: {                                                                                            // 86
+                option: {                                                                                              // 87
+                    type: String,                                                                                      // 88
+                    defaultValue: '',                                                                                  // 89
+                    label: 'Opção',                                                                                    // 90
+                    formOptions: {                                                                                     // 91
+                        VISIBLE: true,                                                                                 // 92
+                        FIELD_COMPONENT: 'TextField'                                                                   // 93
+                    }                                                                                                  // 91
+                },                                                                                                     // 87
+                subprocess: {                                                                                          // 96
+                    type: Object,                                                                                      // 97
+                    blackbox: true,                                                                                    // 98
+                    defaultValue: [],                                                                                  // 99
+                    label: 'SubProcesso',                                                                              // 100
+                    formOptions: {                                                                                     // 101
+                        VISIBLE: true,                                                                                 // 102
+                        FIELD_COMPONENT: 'CollectionSelectField',                                                      // 103
+                        OPTIONSCOLLECTION: {                                                                           // 104
+                            COLLECTIONBASE: 'CollectionSubProcessos',                                                  // 105
+                            COLLECTION_SCHEMA: 'tableview',                                                            // 106
+                            FIRST_FIELD: 'title'                                                                       // 107
+                        }                                                                                              // 104
+                    }                                                                                                  // 101
+                }                                                                                                      // 96
+            }                                                                                                          // 86
+        },                                                                                                             // 83
+        formValidation: {                                                                                              // 113
+            required: { value: true, message: 'O preenchimento da seções é obrigatório' }                              // 114
+        }                                                                                                              // 113
+    },                                                                                                                 // 77
+    tasks: {                                                                                                           // 117
+        type: [Object],                                                                                                // 118
+        blackbox: true,                                                                                                // 119
+        defaultValue: [],                                                                                              // 120
+        label: 'Tarefas',                                                                                              // 121
+        optional: true,                                                                                                // 122
+        formOptions: {                                                                                                 // 123
+            VISIBLE: true,                                                                                             // 124
+            FIELD_COMPONENT: 'MaterialUITableEdit',                                                                    // 125
+            FIELD_SCHEMA: {                                                                                            // 126
+                task: {                                                                                                // 127
+                    type: String,                                                                                      // 128
+                    defaultValue: '',                                                                                  // 129
+                    label: 'Tarefa',                                                                                   // 130
+                    formOptions: {                                                                                     // 131
+                        VISIBLE: true,                                                                                 // 132
+                        FIELD_COMPONENT: 'TextField'                                                                   // 133
+                    }                                                                                                  // 131
+                },                                                                                                     // 127
+                description: {                                                                                         // 136
+                    type: Object,                                                                                      // 137
+                    blackbox: true,                                                                                    // 138
+                    defaultValue: [],                                                                                  // 139
+                    label: 'Descrição',                                                                                // 140
+                    formOptions: {                                                                                     // 141
+                        VISIBLE: true,                                                                                 // 142
+                        FIELD_COMPONENT: 'TextField'                                                                   // 143
+                    }                                                                                                  // 141
+                },                                                                                                     // 136
+                completed: {                                                                                           // 146
+                    type: Boolean,                                                                                     // 147
+                    defaultValue: false,                                                                               // 148
+                    label: 'Completa?',                                                                                // 149
+                    formOptions: {                                                                                     // 150
+                        VISIBLE: false,                                                                                // 151
+                        FIELD_COMPONENT: 'TextField'                                                                   // 152
+                    }                                                                                                  // 150
+                }                                                                                                      // 146
+            }                                                                                                          // 126
+        },                                                                                                             // 123
+        formValidation: {                                                                                              // 157
+            required: { value: true, message: 'O preenchimento da seções é obrigatório' }                              // 158
+        }                                                                                                              // 157
+    },                                                                                                                 // 117
+    createdDate: {                                                                                                     // 161
         type: Date,                                                                                                    // 162
-        label: "Ultima atualização",                                                                                   // 163
+        label: "Data de Criação",                                                                                      // 163
         autoValue: function () {                                                                                       // 164
             function autoValue() {                                                                                     // 164
-                if (this.isUpdate || this.isInsert) return new Date();                                                 // 165
+                if (this.isInsert) return new Date();                                                                  // 165
             }                                                                                                          // 167
                                                                                                                        //
             return autoValue;                                                                                          // 164
         }(),                                                                                                           // 164
-        optional: true,                                                                                                // 168
-        formOptions: {                                                                                                 // 169
-            VISIBLE: true,                                                                                             // 170
-            FIELD_COMPONENT: 'TextField',                                                                              // 171
-            FIELD_TYPE: 'date'                                                                                         // 172
-        }                                                                                                              // 169
-    }                                                                                                                  // 161
+        denyUpdate: true,                                                                                              // 168
+        optional: true,                                                                                                // 169
+        formOptions: {                                                                                                 // 170
+            VISIBLE: true,                                                                                             // 171
+            FIELD_COMPONENT: 'TextField',                                                                              // 172
+            FIELD_TYPE: 'date'                                                                                         // 173
+        }                                                                                                              // 170
+    },                                                                                                                 // 161
+    updatedDate: {                                                                                                     // 176
+        type: Date,                                                                                                    // 177
+        label: "Ultima atualização",                                                                                   // 178
+        autoValue: function () {                                                                                       // 179
+            function autoValue() {                                                                                     // 179
+                if (this.isUpdate || this.isInsert) return new Date();                                                 // 180
+            }                                                                                                          // 182
+                                                                                                                       //
+            return autoValue;                                                                                          // 179
+        }(),                                                                                                           // 179
+        optional: true,                                                                                                // 183
+        formOptions: {                                                                                                 // 184
+            VISIBLE: true,                                                                                             // 185
+            FIELD_COMPONENT: 'TextField',                                                                              // 186
+            FIELD_TYPE: 'date'                                                                                         // 187
+        }                                                                                                              // 184
+    }                                                                                                                  // 176
 };                                                                                                                     // 1
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -2,13 +2,13 @@
   "format": "web-program-pre1",
   "manifest": [
     {
-      "path": "2ff6cad3fc251bdb9a4f1d3a000b53ec72367ab8.js",
+      "path": "1789410c5dbdc8c590645d311bd35f913cb8ebfa.js",
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/2ff6cad3fc251bdb9a4f1d3a000b53ec72367ab8.js?meteor_js_resource=true",
-      "size": 4035329,
-      "hash": "2ff6cad3fc251bdb9a4f1d3a000b53ec72367ab8"
+      "url": "/1789410c5dbdc8c590645d311bd35f913cb8ebfa.js?meteor_js_resource=true",
+      "size": 4035461,
+      "hash": "1789410c5dbdc8c590645d311bd35f913cb8ebfa"
     },
     {
       "path": "091c67cb01eb50666efbfa24aa1045f6956ee602.css",
@@ -191,6 +191,15 @@
       "hash": "a0cc99de792657e82413bb890a4eb74ac6cb7b84"
     },
     {
+      "path": "app/pdf/Introducao.pdf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/pdf/Introducao.pdf",
+      "size": 1199959,
+      "hash": "1cb57443c0f1e531099955c634cb68679b15c546"
+    },
+    {
       "path": "app/pdf/LocalizacaoUrbana.pdf",
       "where": "client",
       "type": "asset",
@@ -214,8 +223,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/pdf/Titulacao.pdf",
-      "size": 173975,
-      "hash": "55a2ddeec8783efcd50eca7bbe24a97e540bf82c"
+      "size": 527777,
+      "hash": "f8b7baa57ebf5bd631d32cd112048d1a87ae905f"
     },
     {
       "path": "app/images/logos-registros/cori.png",

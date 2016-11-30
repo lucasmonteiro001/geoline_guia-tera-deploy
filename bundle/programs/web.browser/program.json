@@ -178,8 +178,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/pdf/ConformacaoObjetiva.pdf",
-      "size": 517150,
-      "hash": "1e4e4fc742537e6b817b88a8da67b4a258a62f1c"
+      "size": 96844,
+      "hash": "3315b76e2b260b9429d9ebbc8d0370fdd0f225cd"
     },
     {
       "path": "app/pdf/EnquadramentoSocial.pdf",
@@ -187,8 +187,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/pdf/EnquadramentoSocial.pdf",
-      "size": 516145,
-      "hash": "a0cc99de792657e82413bb890a4eb74ac6cb7b84"
+      "size": 53314,
+      "hash": "6fb0befd4a5e4e8a6aed0d5f09bf546357e345b7"
     },
     {
       "path": "app/pdf/Introducao.pdf",
@@ -205,8 +205,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/pdf/LocalizacaoUrbana.pdf",
-      "size": 516106,
-      "hash": "8caed0200142f9d95c86d088014626a1d3b0c13f"
+      "size": 76050,
+      "hash": "3ecb2e22e8724236ddf3a314b2f65060f96c42b3"
     },
     {
       "path": "app/pdf/Temporalidade.pdf",
@@ -214,8 +214,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/pdf/Temporalidade.pdf",
-      "size": 517209,
-      "hash": "18b3d60d65fee3400aef460169524ea18bacd4f1"
+      "size": 74140,
+      "hash": "0b193e6bcfd6eba1d7759956d127174335d12594"
     },
     {
       "path": "app/pdf/Titulacao.pdf",
@@ -223,8 +223,8 @@
       "type": "asset",
       "cacheable": false,
       "url": "/pdf/Titulacao.pdf",
-      "size": 527777,
-      "hash": "f8b7baa57ebf5bd631d32cd112048d1a87ae905f"
+      "size": 173975,
+      "hash": "55a2ddeec8783efcd50eca7bbe24a97e540bf82c"
     },
     {
       "path": "app/images/logos-registros/cori.png",

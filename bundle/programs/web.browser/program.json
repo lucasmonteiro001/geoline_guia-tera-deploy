@@ -2,13 +2,13 @@
   "format": "web-program-pre1",
   "manifest": [
     {
-      "path": "1cf4cb64c4855052f31e9a53cff8bcc64dd6d8c7.js",
+      "path": "4cc4123b7fc55d9a7a682f2247d58348ebad1255.js",
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/1cf4cb64c4855052f31e9a53cff8bcc64dd6d8c7.js?meteor_js_resource=true",
-      "size": 4035472,
-      "hash": "1cf4cb64c4855052f31e9a53cff8bcc64dd6d8c7"
+      "url": "/4cc4123b7fc55d9a7a682f2247d58348ebad1255.js?meteor_js_resource=true",
+      "size": 4035340,
+      "hash": "4cc4123b7fc55d9a7a682f2247d58348ebad1255"
     },
     {
       "path": "091c67cb01eb50666efbfa24aa1045f6956ee602.css",
@@ -189,15 +189,6 @@
       "url": "/pdf/EnquadramentoSocial.pdf",
       "size": 53314,
       "hash": "6fb0befd4a5e4e8a6aed0d5f09bf546357e345b7"
-    },
-    {
-      "path": "app/pdf/Introducao.pdf",
-      "where": "client",
-      "type": "asset",
-      "cacheable": false,
-      "url": "/pdf/Introducao.pdf",
-      "size": 1199959,
-      "hash": "1cb57443c0f1e531099955c634cb68679b15c546"
     },
     {
       "path": "app/pdf/LocalizacaoUrbana.pdf",
